@@ -1,0 +1,1 @@
+This is a template for a "middleman":"http://middlemanapp.com/" to "heroku":"http://heroku.com" project.
