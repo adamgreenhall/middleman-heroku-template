@@ -1,4 +1,17 @@
--@title='The middleman heroku template'
+-@title='middleman-heroku template'
 
-%p 
-    Generate a static site with middleman and then host it with heroku.
+:textile
+    Generate a static site with "middleman":http://middlemanapp.com/ and then host it with "heroku":http://devcenter.heroku.com/articles/static-sites-on-heroku. 
+
+    
+    In production use:
+    * haml
+    * "textile":http://redcloth.org/hobix.com/textile/
+    * sass
+    * coffeescript and sprockets
+    * "livereload":http://bit.ly/r0IHMJ (<code>middleman server --livereload</code>)
+        
+    Then when you are ready, "put the site on heroku":http://devcenter.heroku.com/articles/quickstart:
+    * <code>heroku create</code>
+    * <code>git commit</code>
+    * <code>git push heroku master</code>
