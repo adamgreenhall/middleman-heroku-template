@@ -5,23 +5,34 @@
     <link href='/stylesheets/site.css' rel='stylesheet' type='text/css' />
   </head>
   <body>
-    <p>Generate a static site with <a href="http://middlemanapp.com/">middleman</a> and then host it with <a href="http://devcenter.heroku.com/articles/static-sites-on-heroku">heroku</a>.</p>
-    <p>In production use:</p>
+    <p>Generate a static site with <a href="http://middlemanapp.com/">middleman</a> and then host it with <a href="http://devcenter.heroku.com/articles/static-sites-on-heroku">heroku</a>. Use <a href="clean-urls">clean urls</a>.</p>
+    <p>To make your site use:</p>
     <ul>
-    	<li>haml</li>
+    	<li><a href="http://haml-lang.com/">haml</a></li>
     	<li><a href="http://redcloth.org/hobix.com/textile/">textile</a></li>
-    	<li>sass</li>
-    	<li>coffeescript and sprockets</li>
+    	<li><a href="http://sass-lang.com/">sass</a></li>
+    	<li><a href="http://coffeescript.com">coffeescript</a> and <a href="http://middlemanapp.com/guides/coffeescript-sprockets">sprockets</a></li>
     	<li><a href="http://bit.ly/r0IHMJ">livereload</a> (<code>middleman server --livereload</code>)</li>
     </ul>
     <p>Then when you are ready, <a href="http://devcenter.heroku.com/articles/quickstart">put the site on heroku</a>:</p>
     <ul>
-    	<li><code>heroku create</code></li>
+    	<li><code>heroku create</code> (the first time)</li>
     	<li><code>middleman build</code></li>
-    	<li><code>git add build/*</code></li>
+    	<li><code>git add build/*</code> (if you add new pages)</li>
     	<li><code>git commit</code></li>
     	<li><code>git push heroku master</code></li>
     </ul>
     <!-- %script{:type => "text/javascript", :src=>'/javascripts/d3.js'} -->
-  </body>
+  <script type="text/javascript">
+if (typeof gaJsHost == 'undefined') {
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-26495302-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
 </html>

@@ -9,8 +9,19 @@
     <p>This gets taken care of in two steps:</p>
     <ol>
     	<li>Development: in <code>config.rb</code> we un-comment the <code>request.path_info</code> statements. Middleman now serves up clean urls.</li>
-    	<li>Production:</li>
+    	<li>Production: in <code>config.ru</code> use <code>Rack::TryStatic</code></li>
     </ol>
     <!-- %script{:type => "text/javascript", :src=>'/javascripts/d3.js'} -->
-  </body>
+  <script type="text/javascript">
+if (typeof gaJsHost == 'undefined') {
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-26495302-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
 </html>
