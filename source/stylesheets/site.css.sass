@@ -9,7 +9,7 @@ $link-visited-color: false
 $font-color:  #2a2a2a
 $font-family: sans-serif
 
-$body-width: 20em
+$body-width: 25em
 
 
 @include global-reset
@@ -21,26 +21,7 @@ body
     margin:
         left: auto
         right: auto
-        top: 20px
-
+        top: 60px
 
 a
     @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
-
-
-#main
-    padding: 50px
-
-/* d3 styles */
-
-rect:
-    fill: steelblue
-    stroke: white
-
-line:
-    stroke: black
-    shape-rendering: crispEdges
-
-
-
-
