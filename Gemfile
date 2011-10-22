@@ -1,6 +1,7 @@
 source :gemcutter
-gem 'middleman'
-gem 'RedCloth'            #textile
-gem 'coffee-filter'       #javascript style
+gem 'middleman', :group => :development
+gem 'RedCloth',:group => :development            #textile
+gem 'coffee-filter',:group => :development       #javascript style
+gem 'urlify',:group => :development              #urls-that-make-sense
+gem 'rack-contrib'
 gem 'therubyracer-heroku' #give heroku a javascript engine
-gem 'urlify'              #urls-that-make-sense
