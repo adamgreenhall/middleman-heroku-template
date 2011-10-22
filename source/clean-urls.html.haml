@@ -5,4 +5,4 @@
 
     This gets taken care of in two steps:
     # Development: in <code>config.rb</code> we un-comment the <code>request.path_info</code> statements. Middleman now serves up clean urls.
-    # Production: 
+    # Production: in <code>config.ru</code> use <code>Rack::TryStatic</code>

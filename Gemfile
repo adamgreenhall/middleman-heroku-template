@@ -1,5 +1,5 @@
 source :gemcutter
-gem 'middleman', :group => :development
+gem 'middleman', :group => :development          #the static site generator
 gem 'RedCloth',:group => :development            #textile
 gem 'coffee-filter',:group => :development       #javascript style
 gem 'urlify',:group => :development              #urls-that-make-sense
