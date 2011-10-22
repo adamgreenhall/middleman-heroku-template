@@ -93,22 +93,15 @@ end
 # set :images_dir, "alternative_image_directory"
 
 
-#Add .html to request paths with no extension (e.g. '/foo')
 before do
- unless request.path_info =~ /\./ or request.path_info == '/' 
-   request.path_info += '.html'
+ if request.path_info[-1]=='/'
+     request.path_info+='index.html'
+ else
+    unless request.path_info =~ /\./ or request.path_info == '/'
+        request.path_info += '.html'
+    end
  end
 end
-
-# before do
-#  if request.path_info[-1]=='/'
-#      request.path_info+='index.html'
-#  else
-#     unless request.path_info =~ /\./ or request.path_info == '/'
-#         request.path_info += '.html'
-#     end
-#  end
-# end
 
 
 
