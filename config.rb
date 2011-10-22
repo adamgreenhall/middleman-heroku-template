@@ -1,3 +1,5 @@
+google_analytics_account_number=26495302
+
 ### 
 # Compass
 ###
@@ -18,6 +20,13 @@
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
 # require 'haml-coderay'
+
+# require 'rack/codehighlighter'
+# use Rack::Codehighlighter, 
+#   :pygments_api,
+#   :element => "pre>code",
+#   :pattern => /\A:::([-_+\w]+)\s*\n/,
+#   :markdown => true
 
 # CoffeeScript filters in Haml
 # First: gem install coffee-filter
@@ -103,6 +112,11 @@ before do
  end
 end
 
+
+
+
+require 'rack/google_analytics'
+use Rack::GoogleAnalytics, :web_property_id => "UA-#{google_analytics_account_number}-1"
 
 
 # Build-specific configuration
