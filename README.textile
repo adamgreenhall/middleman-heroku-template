@@ -2,7 +2,4 @@ h1. Middleman Heroku Template
 
 This is a template for a "middleman":http://middlemanapp.com/ and "heroku":http:/heroku.com project.
 
-h2. Dependencies
-
-* Bundler
- 
+Check the webpage on "heroku":http://middleman-template.heroku.com/.
