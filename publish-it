@@ -2,3 +2,4 @@
 system('git checkout master')
 system('git merge dev')
 system('git push heroku master')
+system('git checkout dev')
