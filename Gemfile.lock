@@ -78,8 +78,6 @@ GEM
       rack (>= 1.0.0)
     rack-contrib (1.1.0)
       rack (>= 0.9.1)
-    rack-google_analytics (1.0.2)
-      rack
     rack-protection (1.1.4)
       rack
     rack-test (0.6.1)
@@ -121,6 +119,5 @@ DEPENDENCIES
   middleman
   rack-codehighlighter
   rack-contrib
-  rack-google_analytics
   therubyracer-heroku
   urlify
