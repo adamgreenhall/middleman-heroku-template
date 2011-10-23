@@ -3,3 +3,18 @@ h1. Middleman Heroku Template
 This is a template for a "middleman":http://middlemanapp.com/ and "heroku":http:/heroku.com project.
 
 Check the webpage on "heroku":http://middleman-template.heroku.com/.
+
+A workflow might look like this:
+    * <code>show-it</code> and edit your <code>source/</code> files (this runs a live reload server)
+    * <code>built-it</code> when you are happy with your changes (this will build the static html and commit it to your heroku dev site)
+    * <code>publish-it</code> when you are happy with the way it looks on the dev site (this does a git merge and pushes the master to the main heroku site)
+    
+Setup happens by:
+    * <code>git clone git@github.com:adamgreenhall/middleman-heroku-template.git</code>
+    * <code>cd middleman-heroku-template</code>
+    * <code>bundle install</code>
+    * <code>heroku create your-optional-app-name-here</code>
+    * <code>heroku create your-optional-app-name-here-dev --remote dev </code>
+    * <code>git config push.default tracking</code>
+    * <code>git checkout -b staging --track staging/master</code>
+    * you can follow heroku's "instructions":http://devcenter.heroku.com/articles/custom-domains for using custom domains
