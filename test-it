@@ -4,4 +4,4 @@ msg = gets
 system('middleman build')
 system('git add build/*')
 system("git commit -am '#{msg}'")
-system("git push")
+system("git push dev dev:master")

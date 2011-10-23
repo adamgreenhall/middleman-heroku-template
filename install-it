@@ -8,7 +8,5 @@ if name!=""
 else
     system("heroku create --remote dev")
 end
-system("git config push.default tracking")
 system("git checkout -b dev")
 system("git push dev dev:master")
-system("git branch --set-upstream dev dev/master")
