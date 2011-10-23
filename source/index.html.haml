@@ -10,9 +10,13 @@
     * "coffeescript":http://coffeescript.com and "sprockets":http://middlemanapp.com/guides/coffeescript-sprockets
     * "livereload":http://bit.ly/r0IHMJ (<code>middleman server --livereload</code>)
         
-    Then when you are ready, "put the site on heroku":http://devcenter.heroku.com/articles/quickstart:
-    * <code>heroku create</code> (the first time)
-    * <code>middleman build</code>
-    * <code>git add build/*</code> (if you add new pages)
-    * <code>git commit</code>
-    * <code>git push heroku master</code>
+    A workflow might look like this:
+        * <code>show-it</code> and edit your <code>source/</code> files (this runs a live reload server)
+        * <code>test-it</code> when you are happy with your changes (this will build the static html and commit it to your heroku dev site)
+        * <code>publish-it</code> when you are happy with the way it looks on the dev site (this does a git merge and pushes the master to the main heroku site)
+
+    Setup happens by:
+        * <code>git clone git@github.com:adamgreenhall/middleman-heroku-template.git</code>
+        * <code>cd middleman-heroku-template</code>
+        * <code>install-it</code>
+        * you can follow heroku's "instructions":http://devcenter.heroku.com/articles/custom-domains for using custom domains
