@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+system('bundle install')
+puts 'What is your heroku app name (optional)?'
+name = gets.strip
+system("heroku create #{name}")
+if name!=""
+    system("heroku create #{name}-dev --remote dev")
+else
+    system("heroku create --remote dev")
+end
+system("git config push.default tracking")
+system("git checkout -b dev")
+system("git push dev dev:master")
+system("git branch --set-upstream dev dev/master")

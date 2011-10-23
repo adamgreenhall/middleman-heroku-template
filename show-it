@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+system('git checkout dev')
+system('middleman server --livereload')
+
+

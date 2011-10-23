@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+puts 'What did you change?'
+msg = gets
+system('middleman build')
+system('git add build/*')
+system("git commit -am '#{msg}'")
+system("git push")

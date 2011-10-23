@@ -1,9 +1,9 @@
 !!!
 %html{:lang=>"en"}
     %head
-        %title #{@title||""}
+        %title #{(@title||data.page.title)||""}
         %link{:rel=>'stylesheet', :href=>'/stylesheets/site.css', :type => "text/css"}
         
     %body
         = yield
-        / %script{:type => "text/javascript", :src=>'/javascripts/d3.js'}
+        #{google_analytics('UA-26495302-1')}

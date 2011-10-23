@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+system('git checkout master')
+system('git merge dev')
+system('git push')

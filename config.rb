@@ -1,5 +1,3 @@
-google_analytics_account_number=26495302
-
 ### 
 # Compass
 ###
@@ -83,8 +81,7 @@ end
 
 def google_analytics(acct, options = {})
     url_prefix = options[:ssl] ? 'https://ssl' : 'http://www'
-    "<script src=\"#{url_prefix}.google-analytics.com/urchin.js\" type=\"text/javascript\">\n" +
-    "</script>\n" +
+    "<script src=\"http://www.google-analytics.com/urchin.js\" type=\"text/javascript\"></script>\n" +
     "<script type=\"text/javascript\">\n" +
     "  _uacct = \"#{acct}\";\n" +
     "  urchinTracker();\n" +
@@ -111,13 +108,6 @@ before do
     end
  end
 end
-
-
-
-
-require 'rack/google_analytics'
-use Rack::GoogleAnalytics, :web_property_id => "UA-#{google_analytics_account_number}-1"
-
 
 # Build-specific configuration
 configure :build do
